@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Face Detection — Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root{
+      --bg: #0f1724;
+      --card: #0b1220;
+      --accent: #06b6d4;
+      --muted: #9aa7b2;
+    }
+    body{
+      margin:0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #071028 0%, #071b2a 100%);
+      color: #e6eef3;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+    }
+    .card{
+      width:100%;
+      max-width:980px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:14px;
+      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+      padding:28px;
+      display:grid;
+      grid-template-columns: 1fr 340px;
+      gap:20px;
+      align-items:center;
+    }
+    h1{ margin:0 0 6px 0; font-size:28px; letter-spacing: -0.5px; }
+    p{ color:var(--muted); margin:0 0 14px 0; }
+    .features{ display:flex; flex-direction:column; gap:10px; }
+    .feature{
+      background:rgba(255,255,255,0.02);
+      padding:12px;
+      border-radius:10px;
+    }
+    .cta{
+      display:flex;
+      gap:10px;
+      margin-top:14px;
+    }
+    a.btn{
+      text-decoration:none;
+      padding:10px 14px;
+      border-radius:10px;
+      background:var(--accent);
+      color:#042026;
+      font-weight:600;
+    }
+    .screenshot{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      height:220px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.015));
+      border-radius:10px;
+      color:var(--muted);
+      font-size:14px;
+      text-align:center;
+      padding:10px;
+    }
+    footer { margin-top:16px; color:var(--muted); font-size:13px;}
+    @media (max-width:880px){
+      .card{ grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div>
+      <h1>Face Detection & Recognition</h1>
+      <p>Realtime face detection (webcam), face detection in videos, and photo detection — all powered by MediaPipe and OpenCV, presented via Streamlit.</p>
+
+      <div class="features">
+        <div class="feature"><strong>Realtime detection:</strong> Access your webcam and detect faces live.</div>
+        <div class="feature"><strong>Video detection:</strong> Upload a video and get an annotated output with face boxes.</div>
+        <div class="feature"><strong>Photo detection:</strong> Upload a photo and see face bounding boxes and keypoints.</div>
+      </div>
+
+      <div class="cta">
+        <a class="btn" href="#" onclick="alert('Open the Streamlit app (run: streamlit run app.py)')">Open Streamlit App</a>
+        <a class="btn" style="background:#1f2937;color:#fff" href="https://github.com/">Source (optional)</a>
+      </div>
+
+      <footer>Tip: Allow camera access when asked. If running remotely, use a browser that supports webcam streaming for Streamlit.</footer>
+    </div>
+
+    <div>
+      <div class="screenshot">
+        <div>
+          <div><strong>Streamlit Interface</strong></div>
+          <div style="margin-top:8px">Try "Realtime", "Video", or "Photo" tabs after starting the app.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
